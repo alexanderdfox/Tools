@@ -1,8 +1,8 @@
-<Int> = An integer number
+(Int) = An integer number
 
-just run: "swift measure.swfit <Int>"
+just run: "swift measure.swfit (Int)"
 
 or
 
 compile: "swiftc measure.swift"
-run: "./measure <Int>"
+run: "./measure (Int)"
