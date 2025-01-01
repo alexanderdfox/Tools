@@ -1,4 +1,4 @@
-MEASUE ONCE, CUT TWICE!
+MEASURE ONCE, CUT TWICE!
 
 
 (Int) = An integer number
