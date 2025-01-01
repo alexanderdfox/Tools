@@ -1,3 +1,6 @@
+MEASUE ONCE, CUT TWICE!
+
+
 (Int) = An integer number
 
 just run: "swift measure.swfit (Int)"
