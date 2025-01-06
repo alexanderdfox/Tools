@@ -20,4 +20,4 @@ https://youtu.be/eh3bxXHqF2U
 Goal: Software Battery
 https://engineering.mit.edu/engage/ask-an-engineer/how-does-a-battery-work/
 
-How the other half should work: https://youtu.be/4JuuenW50Kk 
+How the other half should work: https://youtu.be/4JuuenW50Kk https://youtu.be/Q5dl1esizM8
