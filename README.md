@@ -10,9 +10,14 @@ or
 compile: "swiftc measure.swift"
 run: "./measure (Int)"
 
-
-
 Possible Issues: Fork Bomb https://youtu.be/nB_s79lHSVs
 
-
 https://www.youtube.com/shorts/B6z8QpeS2-Q
+
+https://youtu.be/eh3bxXHqF2U 
+
+Goal: Software Battery
+
+https://engineering.mit.edu/engage/ask-an-engineer/how-does-a-battery-work/
+
+https://youtu.be/4JuuenW50Kk 
