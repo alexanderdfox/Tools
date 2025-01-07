@@ -21,3 +21,5 @@ Goal: Software Battery
 https://engineering.mit.edu/engage/ask-an-engineer/how-does-a-battery-work/
 
 How the other half should work: https://youtu.be/4JuuenW50Kk https://youtu.be/Q5dl1esizM8
+
+https://shrubbery.net/index.html https://youtu.be/0e2kaQqxmQ0 
