@@ -1,0 +1,37 @@
+Screwdriver Start Time: 1758773223.432548
+Mode: Screwdriver
+Cycles: 5
+Starting simulation...
+Turn: 0 - Direction: LEFT
+Turn 0 (LEFT) completed at: 0.03056812286376953 seconds
+Turn: 1 - Direction: RIGHT
+Turn 1 (RIGHT) completed at: 0.03081989288330078 seconds
+Turn: 2 - Direction: LEFT
+Turn 2 (LEFT) completed at: 0.030887126922607422 seconds
+Turn: 3 - Direction: RIGHT
+Turn 3 (RIGHT) completed at: 0.030929088592529297 seconds
+Turn: 4 - Direction: LEFT
+Turn 4 (LEFT) completed at: 0.030968904495239258 seconds
+
+=== SCREWDRIVER ANALYSIS ===
+Screwdriver Specifications:
+  Diameter: 8.0 mm
+  Length: 20.0 mm
+  Thread Pitch: 1.25 mm/turn
+
+Cycle Performance:
+  Total Cycles: 5
+  Left Cycles: 3
+  Right Cycles: 2
+  Net Direction: -1 (left)
+  Average Cycle Time: 0.000 seconds
+  Average Left Cycle Time: 0.031 seconds
+  Average Right Cycle Time: 0.031 seconds
+
+Calculated Metrics:
+  Torque: 10.001
+  Linear Advance/Second: 12475.622
+  Total Linear Advance: 6.250
+  Rotations/Second: 9980.497
+  Net Linear Advance: 6.250 mm
+Exit: 1758773223.4655619

@@ -1,0 +1,38 @@
+Wrench Start Time: 1758773225.8381538
+Mode: Wrench
+Cycles: 5
+Starting simulation...
+Turn: 0 - Direction: TIGHTEN
+Turn 0 (TIGHTEN) completed at: 0.005155086517333984 seconds
+Turn: 1 - Direction: LOOSEN
+Turn 1 (LOOSEN) completed at: 0.005240201950073242 seconds
+Turn: 2 - Direction: TIGHTEN
+Turn 2 (TIGHTEN) completed at: 0.005295276641845703 seconds
+Turn: 3 - Direction: LOOSEN
+Turn 3 (LOOSEN) completed at: 0.005335330963134766 seconds
+Turn: 4 - Direction: TIGHTEN
+Turn 4 (TIGHTEN) completed at: 0.00537109375 seconds
+
+=== WRENCH ANALYSIS ===
+Wrench Specifications:
+  Max Torque: 25 N⋅m
+  Size: 10mm
+  Handle Length: 200mm
+  Ratchet Teeth: 72 teeth
+
+Cycle Performance:
+  Total Cycles: 5
+  Left Cycles: 2
+  Right Cycles: 3
+  Net Direction: 1 (right)
+  Average Cycle Time: 0.000 seconds
+  Average Left Cycle Time: 0.005 seconds
+  Average Right Cycle Time: 0.005 seconds
+
+Calculated Metrics:
+  Turns/Second: 18517.898
+  Total Work: 785.000
+  Leverage Ratio: 20.000
+  Applied Torque: 0.001
+  Mechanical Advantage: 20.0:1
+Exit: 1758773225.844615

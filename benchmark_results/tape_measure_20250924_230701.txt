@@ -1,0 +1,40 @@
+Tape Measure Start Time: 1758773222.79005
+Mode: Tape Measure
+Cycles: 5
+Starting simulation...
+Measurement: 0 - Direction: EXTEND
+Measurement 0 (EXTEND) completed at: 0.006730079650878906 seconds
+Measurement: 1 - Direction: RETRACT
+Measurement 1 (RETRACT) completed at: 0.006946086883544922 seconds
+Measurement: 2 - Direction: EXTEND
+Measurement 2 (EXTEND) completed at: 0.007009983062744141 seconds
+Measurement: 3 - Direction: RETRACT
+Measurement 3 (RETRACT) completed at: 0.007050037384033203 seconds
+Measurement: 4 - Direction: EXTEND
+Measurement 4 (EXTEND) completed at: 0.0070879459381103516 seconds
+
+=== TAPE MEASURE ANALYSIS ===
+Tape Measure Specifications:
+  Graduations: 1/16 inch
+  Material: Steel
+  Width: 1 inch (25.4mm)
+  Length: 25 feet (7.62m)
+
+Cycle Performance:
+  Total Cycles: 5
+  Left Cycles: 2
+  Right Cycles: 3
+  Net Direction: 1 (right)
+  Average Cycle Time: 0.000 seconds
+  Average Left Cycle Time: 0.007 seconds
+  Average Right Cycle Time: 0.007 seconds
+
+Calculated Metrics:
+  Total Distance Measured: 38100.000
+  Extension Speed: 85171476.296
+  Precision: 0.062
+  Measurements/Second: 11177.359
+  Net Extension: 38100.000 mm
+  Average Speed: 26821.403 m/s
+  Calculated Length: 1.200 meters
+Exit: 1758773222.798822
