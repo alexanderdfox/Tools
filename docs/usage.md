@@ -1,9 +1,63 @@
 # Usage Guide - Multi-Tool Workshop Simulation
 
-## 📋 Command Syntax
+## 📋 Manual Command Syntax
 
 ```bash
 swift tools.swift <mode> <cycles>
+```
+
+## 🤖 Automated Benchmarking
+
+The `benchmark.sh` script provides automated testing and comprehensive reporting:
+
+### Basic Usage
+```bash
+# Run all tools with default settings (5 cycles each)
+./benchmark.sh
+
+# Quick benchmark with 3 cycles per tool
+./benchmark.sh --quick
+
+# Get help and see all options
+./benchmark.sh --help
+```
+
+### Advanced Options
+```bash
+# Custom cycle count
+./benchmark.sh -c 10
+
+# Test specific tools only
+./benchmark.sh -t hammer,saw,wrench
+
+# Custom output directory
+./benchmark.sh -o /path/to/results
+
+# Combined options
+./benchmark.sh -c 15 -t tape,measure,screwdriver -o ./my_benchmarks
+```
+
+### Benchmark Features
+- **🔄 Automated Execution**: Runs all selected tools sequentially
+- **📊 Performance Collection**: Captures timing and efficiency metrics
+- **📈 Report Generation**: Creates detailed markdown reports with analysis
+- **📁 Organized Output**: Timestamped directories with individual tool results
+- **🎯 System Analysis**: Tests process management and context switching efficiency
+- **🔍 CSV Export**: Structured data for further analysis
+- **🧹 Auto-cleanup**: Removes results older than 7 days
+
+### Benchmark Output Structure
+```
+benchmark_results/
+├── benchmark_report_YYYYMMDD_HHMMSS.md    # Main report
+├── summary_YYYYMMDD_HHMMSS.csv            # Performance data
+├── benchmark_YYYYMMDD_HHMMSS.log           # Execution log
+├── tape_measure_YYYYMMDD_HHMMSS.txt        # Individual tool results
+├── screwdriver_YYYYMMDD_HHMMSS.txt
+├── welder_YYYYMMDD_HHMMSS.txt
+├── hammer_YYYYMMDD_HHMMSS.txt
+├── saw_YYYYMMDD_HHMMSS.txt
+└── wrench_YYYYMMDD_HHMMSS.txt
 ```
 
 ## 🛠️ Tool Modes
@@ -148,7 +202,24 @@ Additional tool-specific calculations:
 
 ## ⚙️ Advanced Usage
 
-### Testing System Performance
+### Automated Benchmarking (Recommended)
+```bash
+# Comprehensive system analysis
+./benchmark.sh -c 20
+
+# Stress testing with high cycle counts
+./benchmark.sh -c 100 -t hammer
+
+# Compare specific tools
+./benchmark.sh -t tape,measure,welder -c 25
+
+# Performance regression testing
+./benchmark.sh --quick  # Baseline test
+# ... make system changes ...
+./benchmark.sh --quick  # Compare results
+```
+
+### Manual Testing System Performance
 ```bash
 # Test with high cycle counts for stress testing
 swift tools.swift hammer 100
@@ -167,11 +238,18 @@ swift tools.swift wrench 5
 # Progress to more complex modes
 swift tools.swift saw 10
 swift tools.swift welder 10
+
+# Use automated benchmarking for comprehensive learning
+./benchmark.sh --quick  # See all tools in action
 ```
 
 ### Performance Analysis
 ```bash
-# Run multiple times to analyze consistency
+# Automated consistency testing
+./benchmark.sh -c 10
+./benchmark.sh -c 10  # Run multiple times to compare
+
+# Manual multiple runs for detailed analysis
 for i in {1..5}; do
   echo "Run $i:"
   swift tools.swift tape measure 10
@@ -179,21 +257,44 @@ for i in {1..5}; do
 done
 ```
 
+### Benchmark Report Analysis
+After running benchmarks, analyze the generated reports:
+```bash
+# View the latest benchmark report
+open benchmark_results/benchmark_report_*.md
+
+# Compare CSV data
+cat benchmark_results/summary_*.csv
+
+# Check detailed tool outputs
+ls benchmark_results/*_*.txt
+```
+
 ## 🔍 Troubleshooting
 
 ### Common Issues
+
+#### Manual Tool Execution
 - **"Please provide an integer argument"**: Make sure you provide both mode and cycle count
 - **"Invalid mode"**: Check spelling of tool mode
 - **Process termination errors**: Normal behavior - the program restarts itself
+
+#### Benchmark Script
+- **"Swift is not installed"**: Install Xcode command line tools or Swift
+- **"Permission denied"**: Make the script executable with `chmod +x benchmark.sh`
+- **"bc calculator not found"**: Install bc with `brew install bc` (optional, for calculations)
+- **"No such file or directory"**: Ensure you're in the correct directory with tools.swift
 
 ### Performance Tips
 - Start with small cycle counts (5-10) to test
 - Monitor system performance during execution
 - Use appropriate cycle counts for your system capacity
+- Use `--quick` flag for faster initial testing
+- Check benchmark logs for detailed error information
 
 ## 📈 Interpreting Results
 
-### Timing Analysis
+### Manual Tool Output Analysis
 - **Lower cycle times** = faster system performance
 - **Consistent timing** = stable system behavior
 - **High variance** = system load or resource contention
@@ -207,6 +308,40 @@ done
 - Compare metrics across different tools
 - Analyze efficiency ratios
 - Monitor system resource usage patterns
+
+### Benchmark Report Analysis
+The automated benchmark generates comprehensive reports with:
+
+#### Performance Summary Table
+- **Tool**: Which tool was tested
+- **Cycles**: Number of operations performed
+- **Duration**: Total execution time
+- **Avg Cycle Time**: Average time per operation
+- **Performance**: Operations per second (higher is better)
+
+#### System Information
+- Hardware specifications
+- OS version and architecture
+- CPU and memory details
+- Benchmark execution timestamp
+
+#### Analysis Sections
+- **Process Management Efficiency**: Context switching performance
+- **Tool-Specific Metrics**: Physics-based calculations
+- **Performance Indicators**: What the metrics mean
+- **Recommendations**: How to use the results
+
+#### Detailed Logs
+- Individual tool outputs for troubleshooting
+- CSV data for further analysis
+- Execution logs for debugging
+
+### Best Practices for Analysis
+1. **Baseline Testing**: Run benchmarks before system changes
+2. **Consistent Conditions**: Test under similar system load
+3. **Multiple Runs**: Compare results across several executions
+4. **Trend Analysis**: Monitor performance over time
+5. **Cross-Platform**: Compare results across different systems
 
 ---
 

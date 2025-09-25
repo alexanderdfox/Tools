@@ -13,11 +13,12 @@ A unique Swift program that simulates various workshop tools through process man
 
 ## 🚀 Quick Start
 
+### Manual Tool Execution
 ```bash
 swift tools.swift <mode> <cycles>
 ```
 
-### Examples:
+**Examples:**
 ```bash
 swift tools.swift tape measure 10
 swift tools.swift screwdriver 5
@@ -26,6 +27,30 @@ swift tools.swift hammer 15
 swift tools.swift saw 12
 swift tools.swift wrench 6
 ```
+
+### Automated Benchmarking
+For comprehensive system testing, use the included benchmark script:
+
+```bash
+# Run all tools with default settings (5 cycles each)
+./benchmark.sh
+
+# Quick benchmark with 3 cycles per tool
+./benchmark.sh --quick
+
+# Custom configuration
+./benchmark.sh -c 10 -t hammer,saw,wrench
+
+# Get help
+./benchmark.sh --help
+```
+
+**Benchmark Features:**
+- 🔄 **Automated Testing**: Runs all tools sequentially
+- 📊 **Performance Metrics**: Collects timing and efficiency data
+- 📈 **Report Generation**: Creates detailed markdown reports
+- 🎯 **System Analysis**: Tests process management efficiency
+- 📁 **Organized Results**: Saves outputs in timestamped directories
 
 ## 📊 What It Does
 
@@ -42,14 +67,16 @@ This program serves multiple purposes:
 - **Educational Tool**: Learn about process lifecycle management
 - **Creative Performance Art**: Metaphorical approach to system analysis
 - **Load Testing**: Validate system stability under rapid process cycling
+- **Automated Testing**: Comprehensive benchmark suite with reporting
 
 ## 🔧 Technical Details
 
 - **Platform**: macOS (uses NSWorkspace and AppKit)
-- **Language**: Swift
+- **Language**: Swift + Bash scripting
 - **Process Management**: Self-terminating and restarting
 - **Timing Precision**: Microsecond-level measurements
 - **Physics Integration**: Real tool specifications and calculations
+- **Benchmarking**: Automated testing with comprehensive reporting
 
 ## 📈 Output Metrics
 
